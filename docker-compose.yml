@@ -1,9 +1,11 @@
-version: '3'
+version: '2.4'
 
 services:
   nginx:
     image: nginx
     restart: unless-stopped
+    cpus: 0.1
+    mem_limit: 50m
     volumes:
       - ./html:/usr/share/nginx/html:ro
     environment:
